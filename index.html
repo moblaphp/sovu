@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sovuchivu ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    font-family: 'Segoe UI', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.heart{
+    position:fixed;
+    bottom:-20px;
+    font-size:20px;
+    animation:float 6s linear infinite;
+}
+@keyframes float{
+    from{transform:translateY(0);opacity:1;}
+    to{transform:translateY(-120vh);opacity:0;}
+}
+
+.box{
+    width:340px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+    padding:20px;
+    text-align:center;
+}
+
+h2{ color:#ff3366; }
+
+button{
+    padding:10px 22px;
+    border:none;
+    border-radius:25px;
+    font-size:15px;
+    margin:8px;
+    cursor:pointer;
+}
+.yes{background:#ff3366;color:white;}
+.no{background:#ccc;}
+
+.letter{
+    max-height:360px;
+    overflow-y:auto;
+    text-align:left;
+    font-size:14px;
+    line-height:1.6;
+}
+
+audio{display:none;}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+  <source src="khulta_kali_khulena.mp3" type="audio/mpeg">
+</audio>
+
+<div id="box" class="box">
+  <h2>❤️ Sovuchivu ❤️</h2>
+  <p>Tap to open my heart 💌</p>
+</div>
+
+<script>
+const box = document.getElementById("box");
+
+function heart(){
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤️";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(3+Math.random()*4)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+}
+setInterval(heart,500);
+
+box.onclick = ()=>{
+  box.innerHTML=`
+  <h2>Will you be my Valentine? ❤️</h2>
+  <button class="yes" onclick="p1()">YES</button>
+  <button class="no">NO</button>`;
+};
+
+function p1(){
+box.innerHTML=`
+<div class="letter">
+Usakai aakho mai dekh kai khuch alag hi sukun milata hai<br>
+kisi shabado mai baya nhi kar sakati.<br><br>
+
+Kaisa yee yehsas khud ko samjate samjate usi kai soch mai dub jati<br>
+Kisi shabadoo maj baya nhi kar sakati<br><br>
+
+Mere samnai usaka pagal panti karna kitana sukoon deta hai<br>
+Kisi shabadoo mai baya nhi kar sakati<br><br>
+
+Uska pyar sai gala lagana kitana sukoon deta hai<br>
+Kisi shabadoo mai baya nhi kar sakati<br><br>
+
+Usakai utha samnai anai sai dhadakanai tej hona<br>
+usanai chumanai sai dhadakanai shant hona<br>
+Kisi shabadoo mai baya nhi kar sakati<br><br>
+
+Dur raikhe bhi pass hona<br>
+Pass hote bhi dur rahana<br>
+Usamai bhi yek sukoon pana<br>
+Kisi shabadoo mai baya nhi kar sakati<br><br>
+
+Phikar ki to baat hi alag hai<br>
+Tuje yaad karate karte khush rahana<br>
+Usasai bhi jada feel hona<br>
+Kisi shabadoo mai baya nhi kar sakati<br><br>
+
+Kya hai tu kon hai tu pata kartai kartai tuja mai kho jana<br>
+Kisi shabadoo mai baya nhi kar sakati<br><br>
+
+Koeii apasai kitana pyar karta hai suchate suchte hi kho jana<br>
+Kisi shabadoo mai baya nhi kar sakati<br><br>
+
+Kya yahi pyar hai<br>
+Hai to<br>
+Kisi shabadoo mai baya nhi kar sakati
+</div>
+<h3>Kya yahi pyar hai? ❤️</h3>
+<button class="yes" onclick="p2()">YES</button>
+<button class="no">NO</button>`;
+}
+
+function p2(){
+box.innerHTML=`
+<div class="letter">
+Dole ughadatach tula shudate<br>
+Jag yetach tulach athvate<br>
+Tuji athvan matra khup satvate<br><br>
+
+Tujya yeka msg nai man kashe khush hote<br>
+Anni phone vajta sarva khi visarte<br><br>
+
+Phone varcha n bolta avaj pn khup kahi bolato<br>
+anni vc madhe dole matra rahilel pan sagal bolun jate<br><br>
+
+Tula pahta samjat nhi kay hot pan man matra maj khup khush hote<br>
+Tuja tu hasara chehara pahun sarva khi visarte<br><br>
+
+Kas hoeil kay hoeil mahit nhi mala pan tujyashi n bolta rahvat nhi mala<br><br>
+
+Kash tu majya javal asta tujya mithit ch sarva khi visarle asate<br><br>
+
+Vat pahte mi ya divasachi kadhi hoeil ha divas asa vichar karat karat ch tula pahat rahte<br><br>
+
+Kadhi suten ha manacha ghondhal pan tula pahta man maje tujyat ramate<br><br>
+
+Ashya kashya ya bhavana tujya avaja sathi purn ratra tarsate<br><br>
+
+Yeka good morning shabadane maj man matra shant hote<br><br>
+
+Tula pahta sarva khi visarte 1 tas pan 1 min vatato<br>
+anni suru zalela call thevaycha time yeto teva man maje jad hote<br><br>
+
+Tuji athvan matra khup satvate
+</div>
+<h3>You miss me? 🥺</h3>
+<button class="yes" onclick="p3()">YES</button>
+<button class="no">NO</button>`;
+}
+
+function p3(){
+box.innerHTML=`
+<div class="letter">
+Dur rahatai bhi pass raihana<br>
+Pura din tujmai hi rahna<br>
+Tuje gale laganai ka man karna<br>
+Tuje chubanai ka man karna<br>
+Tera hat pakdana<br>
+jor sai kiss karna<br>
+Gale laga kai sukoon sai soo jya<br>
+Kya hai pata nhi<br>
+Karnai ka man karna<br>
+Kya yahi pyar hai ??
+</div>
+<h3>Do you love me? ❤️</h3>
+<button class="yes" onclick="final()">YES</button>
+<button class="no">NO</button>`;
+}
+
+function final(){
+box.innerHTML=`
+<h2>❤️ I LOVE YOU TOO ❤️</h2>
+<p>
+Sovuuuu… soveee…<br><br>
+My baby boy 💕<br>
+maj bal ❤️<br>
+maj hatti bal <br>
+maji sovadi 💖<br><br>
+my love Soham 💞
+
+YOUR Chivu(Vaishnavi)
+</p>`;
+}
+</script>
+
+</body>
+</html>
